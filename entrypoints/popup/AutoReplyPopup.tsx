@@ -9,7 +9,6 @@ const AutoReplyPopup: React.FC = () => {
   >([]);
   const [showGenerate, setShowGenerate] = useState(true);
   const chatHistoryRef = useRef<HTMLDivElement>(null);
-  // const popupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (chatHistoryRef.current) {
@@ -117,12 +116,12 @@ const AutoReplyPopup: React.FC = () => {
         </div>
 
         {/* close button */}
-        {/* <button
+        <button
           className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 cursor-pointer text-2xl"
           onClick={() => window.postMessage({ type: "CLOSE_POPUP" }, "*")}
         >
           &times;
-        </button> */}
+        </button> 
       </div>
     </>
   );
